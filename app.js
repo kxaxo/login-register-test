@@ -4,7 +4,13 @@ import bodyParser from "body-parser";
 import pg from "pg";
 import bcrypt from "bcrypt";
 import cors from "cors";
-app.use(cors());
+const corsConfig = {
+    origin : "*",
+    credential: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+};
+app.options("", cors(corsConfig));
+app.use(cors(corsConfig))
 config();
 
 const app = express();
