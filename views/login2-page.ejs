@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-login.css">
+    <title>ลงชื่อเข้าใช้ - บัญชี booble</title>
+</head>
+<body>
+    <section class="signin-section">
+        <form action="/login-confirm" method="post">
+            <% if (locals.email) { %>
+                <input type="text" value="<%= email %>" name="email" readonly>
+            <% } %>
+            <h1>
+                <span style="color: rgb(228, 5, 5);">B</span>
+                <span style="color: rgb(0, 56, 241);">o</span>
+                <span style="color: orange;">o</span>
+                <span style="color: rgb(0, 56, 241);">b</span>
+                <span style="color: rgb(1, 176, 1);">l</span>
+                <span style="color: rgb(228, 5, 5);">e</span>
+            </h1>
+            <h2>ลงชื่อเข้าใช้</h2>
+            <p>ใช้บัญชี Booble ของคุณ</p>
+            <div class="input">
+                <label>รหัสผ่าน</label>
+                <Input type="text" name="password" required></Input>
+            </div>
+            <% if (locals.incorrect) { %>
+                <div class="check_input" style="color: red; font-size: 13px; margin-top: 5px;">
+                    รหัสผ่านไม่ถูกต้อง
+                </div>
+            <% } %>
+            <div class="selection-form">
+                <a href="/register">สร้างบัญชี</a>
+                <button type="submit">เข้าสู่ระบบ</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="./js/login.js" charset="UTF-8"></script>
+</body>
+</html>
+</body>
+</html>

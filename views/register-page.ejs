@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-register.css">
+    <title>สร้างบัญชีผู้ใช้ - บัญชี booble</title>
+</head>
+<body>
+    <section class="signup-section">
+        <form action="/register" method="post">
+            <h1>
+                <span style="color: rgb(228, 5, 5);">B</span>
+                <span style="color: rgb(0, 56, 241);">o</span>
+                <span style="color: orange;">o</span>
+                <span style="color: rgb(0, 56, 241);">b</span>
+                <span style="color: rgb(1, 176, 1);">l</span>
+                <span style="color: rgb(228, 5, 5);">e</span>
+            </h1>
+            <h2>ลงชื่อเข้าใช้</h2>
+            <p>ใช้บัญชี Booble ของคุณ</p>
+            <div class="input name" style="margin-top: 20px;">
+                <label>ชื่อ</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="input hobby" style="margin-top: 20px;">
+                <label>งานอดิเรก</label>
+                <input type="text" name="hobby" required>
+            </div>
+            <div class="input mail" style="margin-top: 20px;">
+                <label>บีเมลล์หรือโทรศัพท์</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="input password" style="margin-top: 20px;">
+                <label>รหัสผ่าน</label>
+                <input type="text" name="password" required>
+            </div>
+
+            <div class="selection-form" style="margin-top: 20px;">
+                <a href="/">ย้อนกลับ</a>
+                <button type="submit">สร้างบัญชี</button>
+            </div>
+            <% if (locals.message) {%>
+                <p style="color: red;"><%= message %></p>
+            <% } %>
+        </form>
+    </section>
+
+    <script src="./js/register.js"></script>
+</body>
+</html>

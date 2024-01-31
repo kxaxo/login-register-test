@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section{
+    border: 1px solid rgb(211, 211, 211);
+    width: 450px;
+    height: 500px;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+h1{
+    user-select: none;
+}
+
+section h1, h2, p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-weight: 500;
+}
+
+p{
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+div.input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    cursor: text;
+}
+
+div.input label{
+    font-size: 15px;
+    color: rgb(95, 94, 94);
+    position: relative;
+    user-select: none;
+    top: 5px;
+    transition: 250ms all;
+}
+
+div.input input{
+    outline: none;
+    border: none;
+    display: block;
+    position: absolute;
+    display: none;
+    font-size: 16px;
+    top: 15px;
+}
+
+div.selection-form{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.selection-form a{
+    text-decoration: none;
+    color: rgb(0, 97, 241);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+div.selection-form button{
+    width: 65px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 97, 241);
+    color: white;
+    cursor: pointer;
+}
+
+div.selection-form button:hover{
+    background-color: rgb(2, 69, 169);
+}
+
+div.input label.active{
+    padding: 5px;
+    font-size: 13px;
+    top: -20px;
+    background-color: #fff;
+    transition: 250ms all;
+}
+
+.focus-input{
+    border: 1px solid rgb(0, 97, 241) !important;
+}
