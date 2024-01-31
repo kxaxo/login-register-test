@@ -3,6 +3,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import bcrypt from "bcrypt";
+import cors from "cors";
+app.use(cors());
 config();
 
 const app = express();
