@@ -9,11 +9,12 @@ const corsConfig = {
     credential: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
 };
-app.options("", cors(corsConfig));
-app.use(cors(corsConfig))
+
 config();
 
 const app = express();
+app.options("", cors(corsConfig));
+app.use(cors(corsConfig));
 const port = 3000;
 const salt_round = 10;
 
